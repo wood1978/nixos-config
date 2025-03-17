@@ -41,12 +41,12 @@
         modules = [
           ./hosts/physical/C1297
 	  ./home-manager/desktop
-          ./users/wood.nix
+          ./users/woodzhan.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
-            home-manager.users.wood = import ./home-manager/hm-wood.nix;
+            home-manager.users.woodzhan = import ./home-manager/hm-woodzhan.nix;
             # home-manager.extraSpecialArgs = inputs;
           }
         ];
