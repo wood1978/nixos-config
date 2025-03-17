@@ -119,6 +119,7 @@
       res = "!git reset --hard";
       done = "!git push origin HEAD";
       l = "!git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30";
+      ls = "log --graph --pretty=format:\"%h <%an> %ar %s\""
     };
   };
 
