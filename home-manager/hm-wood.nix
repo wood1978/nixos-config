@@ -4,12 +4,6 @@
   home.username = "wood";
   home.homeDirectory = "/home/wood";
 
-  imports = [
-    ../home-manager/desktop/virtualisation.libvirtd.nix
-    ../home-manager/desktop/services.picom.nix
-    ../home-manager/desktop/plank.nix
-  ];
-
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
   # home.file.".config/i3/scripts" = {
@@ -27,7 +21,7 @@
     "Xft.dpi" = 96;
   };
 
-  home.packages = with pkgs;[
+  home.packages = with pkgs; [
     #neofetch
     #nnn # terminal file manager
     screen
@@ -125,7 +119,7 @@
       res = "!git reset --hard";
       done = "!git push origin HEAD";
       l = "!git log --pretty=format:\"%C(magenta)%h%Creset -%C(red)%d%Creset %s %C(dim green)(%cr) [%an]\" --abbrev-commit -30";
-      ls = "log --graph --pretty=format:\"%h <%an> %ar %s\""
+      ls = "log --graph --pretty=format:\"%h <%an> %ar %s\"";
     };
   };
 
