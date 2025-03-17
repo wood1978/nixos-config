@@ -41,6 +41,7 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/physical/C1297
+          ./users/wood.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
@@ -49,9 +50,6 @@
             home-manager.users.wood = import ./home-manager/hm-wood.nix;
             # home-manager.extraSpecialArgs = inputs;
           }
-        ];
-        import = [
-          ./users/wood.nix
         ];
       };
     };
