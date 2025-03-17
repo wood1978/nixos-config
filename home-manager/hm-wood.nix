@@ -4,6 +4,7 @@
 
   imports = [
     ./hm-wood_common.nix
+    ./desktop/prismlauncher.nix
   ];
 
   programs.git = {

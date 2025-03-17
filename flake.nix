@@ -51,6 +51,27 @@
           }
         ];
       };
+      b660mVM = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/physical/b660mVM
+	  ./home-manager/desktop
+          ./users/wood.nix
+	  ./users/bella.nix
+	  ./users/lulu.nix
+	  ./users/woody.nix
+          home-manager.nixosModules.home-manager {
+            home-manager.useGlobalPkgs = true;
+            home-manager.useUserPackages = true;
+            home-manager.backupFileExtension = "backup";
+            home-manager.users.wood = import ./home-manager/hm-wood.nix;
+            home-manager.users.bella = import ./home-manager/hm-bella.nix;
+            home-manager.users.lulu = import ./home-manager/hm-lulu.nix;
+            home-manager.users.woody = import ./home-manager/hm-woody.nix;
+            # home-manager.extraSpecialArgs = inputs;
+          }
+        ];
+      };
     };
   };
 }
