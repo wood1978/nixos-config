@@ -6,6 +6,8 @@
 
   imports = [
     ../home-manager/desktop/virtualisation.libvirtd.nix
+    ../home-manager/desktop/services.picom.nix
+    ../home-manager/desktop/plank.nix
   ];
 
   # home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
