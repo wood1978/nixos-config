@@ -29,6 +29,9 @@
     prusa-slicer
     smplayer
 
+    # driver
+    nextcloud-client
+
     # graphics
     drawio
     freecad
