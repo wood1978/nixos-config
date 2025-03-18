@@ -15,7 +15,7 @@
 
   boot.kernelParams = [ "i915.force_probe=0416" ];
 
-  networking.hostName = "t490"; # Define your hostname.
+  networking.hostName = "t440p"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   networking.extraHosts = ''
