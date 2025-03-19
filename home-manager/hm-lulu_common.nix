@@ -27,7 +27,10 @@
     google-chrome
     libreoffice-qt
     prusa-slicer
+    
+    # Multimedia
     smplayer
+    shotcut
 
     # graphics
     drawio
