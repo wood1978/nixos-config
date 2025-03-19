@@ -21,6 +21,7 @@
     10.1.3.44 openproject.truelight.com.tw
     10.1.3.50 tsdb.truelight.com.tw
     10.1.3.51 haos.truelight.com.tw
+    10.1.3.53 nc.truelight.com.tw
   '';
 
   # Configure network proxy if necessary
