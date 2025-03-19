@@ -12,15 +12,26 @@
       # to avoid problems caused by different versions of nixpkgs.
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... }: {
-    nixosConfigurations = {
-      t490 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
+  outputs = inputs@{ nixpkgs, home-manager, ... } : let
+    systems = {
+      t490 = {
         extraImports = [
           inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t490
         ];
+      };
+      t440p = {
+        extraImports = [
+          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t440p
+        ];
+      };
+    };
+  in {
+    nixosConfigurations = {
+      t490 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
         modules = [
 	  ./hosts/physical/t490
 	  ./home-manager/desktop
@@ -72,9 +83,6 @@
       };
       t440p = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
-        extraImports = [
-          inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t440p
-        ];
         modules = [
 	  ./hosts/physical/t440p
 	  ./home-manager/desktop

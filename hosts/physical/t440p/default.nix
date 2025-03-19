@@ -2,16 +2,13 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
-
-{
-  imports =
-    [
-      # hosts/physical
-      ../default.nix
-      # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-    ];
+{ config, pkgs, ... } : {
+  imports = [
+    # hosts/physical
+    ../default.nix
+    # Include the results of the hardware scan.
+    ./hardware-configuration.nix
+  ];
 
   boot.kernelParams = [ "i915.force_probe=0416" ];
 
@@ -31,7 +28,7 @@
 
   hardware.graphics = {
     extraPackages = with pkgs; [
-      ... # your Open GL, Vulkan and VAAPI drivers
+      #... # your Open GL, Vulkan and VAAPI drivers
       vpl-gpu-rt # or intel-media-sdk for QSV
     ];
   };
