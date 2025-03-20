@@ -4,6 +4,7 @@
 
   imports = [
     ./hm-wood_common.nix
+    ./develop/neovim
   ];
 
   home.packages = with pkgs; [
@@ -13,5 +14,5 @@
   programs.git = {
     userName = "Wood Zhan";
     userEmail = "woodzhan@truelight.com.tw";
- };
+  };
 }

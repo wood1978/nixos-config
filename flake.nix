@@ -13,9 +13,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixvim = {
+        url = "github:nix-community/nixvim/nixos-24.11";
+        inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ nixpkgs, home-manager, ... } : let
+  outputs = { self, nixpkgs, home-manager, ... } @ inputs : let
     systems = {
       t490 = {
         extraImports = [
@@ -33,15 +37,17 @@
       t490 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-	  ./hosts/physical/t490
-	  ./home-manager/desktop
-	  ./users/wood.nix
-	  home-manager.nixosModules.home-manager {
+	        ./hosts/physical/t490
+	        ./home-manager/desktop
+	        ./users/wood.nix
+	        home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-	    home-manager.backupFileExtension = "backup";
+	          home-manager.backupFileExtension = "backup";
             home-manager.users.wood = import ./home-manager/hm-wood.nix;
-            # home-manager.extraSpecialArgs = inputs;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
           }
         ];
       };
@@ -49,14 +55,16 @@
         system = "x86_64-linux";
         modules = [
           ./hosts/physical/C1297
-	  ./home-manager/desktop
+	        ./home-manager/desktop
           ./users/woodzhan.nix
           home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
             home-manager.backupFileExtension = "backup";
             home-manager.users.woodzhan = import ./home-manager/hm-woodzhan.nix;
-            # home-manager.extraSpecialArgs = inputs;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
           }
         ];
       };
@@ -77,28 +85,32 @@
             home-manager.users.bella = import ./home-manager/hm-bella.nix;
             home-manager.users.lulu = import ./home-manager/hm-lulu.nix;
             home-manager.users.woody = import ./home-manager/hm-woody.nix;
-            # home-manager.extraSpecialArgs = inputs;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
           }
         ];
       };
       t440p = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-	  ./hosts/physical/t440p
-	  ./home-manager/desktop
-	  ./users/wood.nix
+	        ./hosts/physical/t440p
+	        ./home-manager/desktop
+	        ./users/wood.nix
           ./users/bella.nix
-	  ./users/lulu.nix
-	  ./users/woody.nix
-	  home-manager.nixosModules.home-manager {
+	        ./users/lulu.nix
+	        ./users/woody.nix
+	        home-manager.nixosModules.home-manager {
             home-manager.useGlobalPkgs = true;
             home-manager.useUserPackages = true;
-	    home-manager.backupFileExtension = "backup";
+	          home-manager.backupFileExtension = "backup";
             home-manager.users.wood = import ./home-manager/hm-wood.nix;
             home-manager.users.bella = import ./home-manager/hm-bella.nix;
             home-manager.users.lulu = import ./home-manager/hm-lulu.nix;
             home-manager.users.woody = import ./home-manager/hm-woody.nix;
-            # home-manager.extraSpecialArgs = inputs;
+            home-manager.extraSpecialArgs = {
+              inherit inputs;
+            };
           }
         ];
       };

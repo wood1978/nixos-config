@@ -90,10 +90,10 @@
   programs.firefox.enable = true;
 
   # Install neovim
-  programs.neovim = {
-    enable = true;
-    defaultEditor = true;
-  };
+  #programs.neovim = {
+  #  enable = true;
+  #  defaultEditor = true;
+  #};
 
   nixpkgs.config = {
     # Allow unfree packages
