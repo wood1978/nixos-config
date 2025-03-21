@@ -1,8 +1,8 @@
-{ config, pkgs, ... }: {
-  environment.systemPackages = with pkgs; [
-    picom
-  ];
+{ pkgs, ... }: {
+	environment.systemPackages = with pkgs; [
+		picom
+	];
 
-  # Enable picom compositor
-  services.picom.enable = true;
+	# Enable picom compositor
+	services.picom.enable = true;
 }

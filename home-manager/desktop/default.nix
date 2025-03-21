@@ -1,7 +1,7 @@
 {
-  imports = [
-    ./virtualisation.libvirtd.nix
-    ./services.picom.nix
-    ./plank.nix
-  ];
+	imports = [
+		./virtualisation.libvirtd.nix
+		./services.picom.nix
+		./plank.nix
+	];
 }
