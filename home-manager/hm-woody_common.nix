@@ -37,6 +37,8 @@
 		kicad
 
 		# develop
+		ctags
+		cscope
 		meld
 
 		# archives
