@@ -30,6 +30,9 @@
 		google-chrome
 		libreoffice-qt
 		prusa-slicer
+
+		# multimedia
+		mpv
 		smplayer
 
 		# driver

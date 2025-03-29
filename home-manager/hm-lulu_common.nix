@@ -29,6 +29,7 @@
 		prusa-slicer
 
 		# Multimedia
+		mpv
 		smplayer
 		shotcut
 
