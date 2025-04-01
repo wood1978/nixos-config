@@ -35,6 +35,10 @@
 
 		# multimedia
 		vdhcoapp
+		# * User-wide install:
+		#     Need run "path/of/vdhcoapp install --user" for each user setup environment
+		# * System-wide install:
+		#     Need run "path/of/vdhcoapp install --system" setup environment
 		mpv
 		smplayer
 		shotcut
