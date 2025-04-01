@@ -29,11 +29,15 @@
 		keepass
 		google-chrome
 		libreoffice-qt
+
+		# 3D printer
 		prusa-slicer
 
 		# multimedia
+		vdhcoapp
 		mpv
 		smplayer
+		shotcut
 
 		# driver
 		nextcloud-client

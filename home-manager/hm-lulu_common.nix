@@ -26,9 +26,12 @@
 		keepass
 		google-chrome
 		libreoffice-qt
+
+		# 3D printer
 		prusa-slicer
 
 		# Multimedia
+		vdhcoapp
 		mpv
 		smplayer
 		shotcut

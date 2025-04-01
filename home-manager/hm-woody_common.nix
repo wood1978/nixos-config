@@ -26,18 +26,22 @@
 		keepass
 		google-chrome
 		libreoffice-qt
+
+		# 3D printer
 		prusa-slicer
 
 		# multimedia
+		vdhcoapp
 		mpv
 		smplayer
+		shotcut
 
 		# graphics
 		drawio
 		freecad
 
 		# EDA-tools
-		kicad
+		#kicad
 
 		# develop
 		ctags
