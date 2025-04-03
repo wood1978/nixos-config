@@ -29,6 +29,7 @@
 		keepass
 		google-chrome
 		libreoffice-qt
+		citrix_workspace
 
 		# 3D printer
 		prusa-slicer
