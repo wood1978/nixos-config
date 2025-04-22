@@ -15,6 +15,7 @@
 			vhostUserPackages = [ pkgs.virtiofsd ];
 		};
 	};
+	virtualisation.spiceUSBRedirection.enable = true;
 
 	environment.systemPackages = with pkgs; [
 		dconf

@@ -1,4 +1,4 @@
-{ inputs, ... } : {
+{ inputs, config, pkgs, ... } : {
 	imports = [
 		inputs.nixvim.homeManagerModules.nixvim
 		./autocommands.nix
@@ -10,6 +10,11 @@
 	];
 
 	home.shellAliases.v = "nvim";
+
+	home.packages = with pkgs; [
+		ctags
+		cscope
+	];
 
 	programs.nixvim = {
 		enable = true;
