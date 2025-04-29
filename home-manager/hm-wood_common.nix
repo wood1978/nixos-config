@@ -101,6 +101,7 @@
 		#glow # markdown previewer in terminal
 
 		btop	# replacement of htop/nmon
+		htop
 		iotop # io monitoring
 		iftop # network monitoring
 
