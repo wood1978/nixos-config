@@ -56,6 +56,7 @@
 
 		# develop
 		meld
+		arduino-ide
 
 		# archives
 		zip
