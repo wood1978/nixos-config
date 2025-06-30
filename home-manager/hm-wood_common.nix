@@ -43,6 +43,7 @@
 		mpv
 		smplayer
 		shotcut
+		kdePackages.kdenlive
 
 		# driver
 		nextcloud-client

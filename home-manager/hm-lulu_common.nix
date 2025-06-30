@@ -35,6 +35,7 @@
 		mpv
 		smplayer
 		shotcut
+		kdePackages.kdenlive
 
 		# graphics
 		drawio
