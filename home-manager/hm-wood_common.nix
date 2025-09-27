@@ -30,6 +30,8 @@
 		google-chrome
 		libreoffice-qt
 		citrix_workspace
+		appimage-run
+		rclone
 
 		# 3D printer
 		prusa-slicer
@@ -58,6 +60,7 @@
 		# develop
 		meld
 		arduino-ide
+		stm32cubemx
 
 		# archives
 		zip
