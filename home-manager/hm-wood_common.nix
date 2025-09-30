@@ -32,6 +32,7 @@
 		citrix_workspace
 		appimage-run
 		rclone
+		fastfetch
 
 		# 3D printer
 		prusa-slicer
