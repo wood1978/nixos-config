@@ -3,7 +3,7 @@
 		./barbar.nix
 		./comment.nix
 		./floaterm.nix
-		./harpoon.nix
+		# ./harpoon.nix #25.05 not support
 		./lsp.nix
 		./lualine.nix
 		./markdown-preview.nix
