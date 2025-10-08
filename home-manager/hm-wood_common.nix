@@ -61,7 +61,10 @@
 		# develop
 		meld
 		arduino-ide
-		stm32cubemx
+
+		# For STM32CubeIDE
+		gsettings-desktop-schemas
+		adwaita-icon-theme
 
 		# archives
 		zip

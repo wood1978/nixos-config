@@ -17,6 +17,7 @@
 			url = "github:nix-community/nixvim/nixos-25.05";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		stm32cubeide.url = "git+https://git.sr.ht/~shelvacu/stm32cubeide-nix";
 	};
 
 	outputs = { self, nixpkgs, home-manager, ... } @ inputs : let
@@ -31,6 +32,9 @@
 					inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t440p
 				];
 			};
+		};
+		pkgs = import inputs.nixpkgs {
+			overlays = [ inputs.stm32cubeide.overlays.default ];
 		};
 	in {
 		nixosConfigurations = {
