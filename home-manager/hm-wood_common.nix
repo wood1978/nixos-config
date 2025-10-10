@@ -1,6 +1,7 @@
 { config, pkgs, ... } : {
 	imports = [
 		./develop/neovim
+		./develop/stm32cubeide
 	];
 	# home.file.".config/i3/wallpaper.jpg".source = ./wallpaper.jpg;
 
@@ -61,10 +62,6 @@
 		# develop
 		meld
 		arduino-ide
-
-		# For STM32CubeIDE
-		gsettings-desktop-schemas
-		adwaita-icon-theme
 
 		# archives
 		zip
