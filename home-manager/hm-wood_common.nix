@@ -63,6 +63,10 @@
 		meld
 		arduino-ide
 
+		# Rust
+		cargo
+		rustc
+
 		# archives
 		zip
 		xz
