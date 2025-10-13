@@ -86,6 +86,14 @@
 		enable = true;
 	};
 
+	services.udev.extraRules = ''
+# stm32 discovery boards, with onboard st/linkv2
+# ie, STM32L, STM32F4.
+
+SUBSYSTEMS=="usb", ATTRS{idVendor}=="0483", ATTRS{idProduct}=="3748", MODE="660", \
+TAG+="uaccess", ENV{ID_MM_DEVICE_IGNORE}="1", SYMLINK+="stlinkv2_%n"
+  	'';
+
 	# Install firefox.
 	programs.firefox.enable = true;
 
