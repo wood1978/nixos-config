@@ -3,6 +3,6 @@
 	users.users.woodzhan = {
 		isNormalUser = true;
 		description = "Wood Zhan";
-		extraGroups = [ "dialout" "networkmanager" "wheel" ];
+		extraGroups = [ "dialout" "networkmanager" "plugdev" "wheel" ];
 	};
 }
