@@ -6,7 +6,7 @@
 		gsettings-desktop-schemas
 		adwaita-icon-theme
 		stlink
-		stlink-gui
+		#stlink-gui
 		(writeShellScriptBin "stm32cubeide.sh" ''
 			WORK_DIR="~/SourceCode/STM32CubeIDE"
 			mkdir -p "$WORK_DIR"
