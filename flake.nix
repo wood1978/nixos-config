@@ -39,6 +39,7 @@
 				modules = [
 					./hosts/physical/t490
 					./home-manager/desktop
+					./home-manager/develop/stm32cubeide/st-link.udev_rules
 					./users/wood.nix
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
@@ -56,6 +57,7 @@
 				modules = [
 					./hosts/physical/C1297
 					./home-manager/desktop
+					./home-manager/develop/stm32cubeide/st-link.udev_rules
 					./users/woodzhan.nix
 					home-manager.nixosModules.home-manager {
 						home-manager.useGlobalPkgs = true;
