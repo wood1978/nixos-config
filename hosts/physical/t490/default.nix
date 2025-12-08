@@ -67,7 +67,4 @@
 	# List services that you want to enable:
 	# Enable bluetooth service
 	services.blueman.enable = true;
-
-	services.netbird.enable = true; # for netbird service & CLI
-	environment.systemPackages = [ pkgs.netbird-ui ]; # for GUI
 }

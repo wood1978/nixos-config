@@ -5,8 +5,8 @@
 	home.packages = with pkgs; [
 		gsettings-desktop-schemas
 		adwaita-icon-theme
-		stlink
-		#stlink-gui
+		#stlink
+		stlink-gui
 		(writeShellScriptBin "stm32cubeide.sh" ''
 			WORK_DIR="~/SourceCode/STM32CubeIDE"
 			mkdir -p "$WORK_DIR"
