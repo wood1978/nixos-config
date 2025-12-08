@@ -56,6 +56,7 @@
 		# graphics
 		drawio
 		freecad
+		gimp
 
 		# EDA-tools
 		kicad
