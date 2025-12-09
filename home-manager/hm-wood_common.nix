@@ -64,6 +64,7 @@
 		# develop
 		meld
 		arduino-ide
+		vscode
 
 		# Rust
 		cargo
