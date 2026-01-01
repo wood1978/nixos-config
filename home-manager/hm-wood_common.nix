@@ -31,7 +31,7 @@
 		keepass
 		google-chrome
 		libreoffice-qt
-		citrix_workspace
+		#citrix_workspace
 		appimage-run
 		rclone
 		fastfetch
@@ -133,7 +133,7 @@
 
 	programs.git = {
 		enable = true;
-		aliases = {
+		settings.aliases = {
 			s = "status";
 			co = "checkout";
 			cob = "checkout -b";
@@ -170,7 +170,7 @@
 	# You can update Home Manager without changing this value. See
 	# the Home Manager release notes for a list of state version
 	# changes in each release.
-	home.stateVersion = "25.05";
+	home.stateVersion = "25.11";
 
 	# Let Home Manager install and manage itself.
 	programs.home-manager.enable = true;

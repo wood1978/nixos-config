@@ -35,8 +35,8 @@
 		fcitx5.addons = with pkgs; [
 			fcitx5-chewing
 			fcitx5-table-extra
-			fcitx5-configtool
-			fcitx5-chinese-addons
+			qt6Packages.fcitx5-configtool
+			qt6Packages.fcitx5-chinese-addons
 		];
 	};
 
@@ -101,6 +101,13 @@
 		# Allow unfree packages
 		allowUnfree = true;
 
+		permittedInsecurePackages = [
+        	"qtwebengine-5.15.19"
+			"libsoup-2.74.3"
+    	];
+
+		allowBroken = true;
+
 		firefox = {
 			enableGoogleTalkPlugin = true;
 			enableAdobeFlash = true;
@@ -158,7 +165,7 @@
 	# this value at the release version of the first install of this system.
 	# Before changing this value read the documentation for this option
 	# (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-	system.stateVersion = "25.05"; # Did you read the comment?
+	system.stateVersion = "25.11"; # Did you read the comment?
 
 	nix.gc = {
 		automatic = true;

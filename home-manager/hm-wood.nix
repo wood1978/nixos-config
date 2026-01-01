@@ -7,8 +7,8 @@
     ./desktop/prismlauncher.nix
   ];
 
-  programs.git = {
-    userName = "Wood Chan";
-    userEmail = "ShihHsien.Chan@gmail.com";
+  programs.git.settings.user = {
+    name = "Wood Chan";
+    email = "ShihHsien.Chan@gmail.com";
   };
 }
