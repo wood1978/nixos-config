@@ -34,6 +34,24 @@
 		};
 	in {
 		nixosConfigurations = {
+			t14g6 = nixpkgs.lib.nixosSystem {
+                                system = "x86_64-linux";
+                                modules = [
+                                        ./hosts/physical/t14g6
+                                        ./home-manager/desktop
+                                        ./home-manager/develop/stm32cubeide/st-link.udev_rules
+                                        ./users/wood.nix
+                                        home-manager.nixosModules.home-manager {
+                                                home-manager.useGlobalPkgs = true;
+                                                home-manager.useUserPackages = true;
+                                                home-manager.backupFileExtension = "backup";
+                                                home-manager.users.wood = import ./home-manager/hm-wood.nix;
+                                                home-manager.extraSpecialArgs = {
+                                                        inherit inputs;
+                                                };
+                                        }
+                                ];
+                        };
 			t490 = nixpkgs.lib.nixosSystem {
 				system = "x86_64-linux";
 				modules = [

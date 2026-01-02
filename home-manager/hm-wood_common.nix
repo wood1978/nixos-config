@@ -35,6 +35,7 @@
 		appimage-run
 		rclone
 		fastfetch
+		synergy
 
 		# 3D printer
 		prusa-slicer
