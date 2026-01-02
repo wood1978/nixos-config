@@ -7,11 +7,11 @@
 	];
 
 	home.packages = with pkgs; [
-		barrier
+		#barrier
 	];
 
-	programs.git = {
-		userName = "Wood Zhan";
-		userEmail = "woodzhan@truelight.com.tw";
+	programs.git.settings.user = {
+		name = "Wood Zhan";
+		email = "woodzhan@truelight.com.tw";
 	};
 }
