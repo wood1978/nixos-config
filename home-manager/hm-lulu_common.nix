@@ -45,7 +45,9 @@
 		#kicad
 
 		# develop
-		#meld
+		meld
+		vscode
+		arduino-ide
 
 		# archives
 		zip
