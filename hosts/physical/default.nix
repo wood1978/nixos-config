@@ -59,6 +59,9 @@
 		variant = "";
 	};
 
+	services.xscreensaver.enable = true;
+	security.pam.services.xscreensaver.enable = true;
+
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
 
