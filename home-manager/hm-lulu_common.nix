@@ -46,6 +46,7 @@
 
 		# develop
 		meld
+		python315
 		vscode
 		arduino-ide
 
