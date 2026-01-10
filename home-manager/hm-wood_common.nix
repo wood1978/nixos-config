@@ -37,6 +37,9 @@
 		fastfetch
 		synergy
 
+		# Social
+		wechat
+
 		# 3D printer
 		prusa-slicer
 
