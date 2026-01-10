@@ -62,6 +62,9 @@
 	services.xscreensaver.enable = true;
 	security.pam.services.xscreensaver.enable = true;
 
+	# Enable BAMF for better application launching and switching.
+	services.bamf.enable = true;
+
 	# Enable CUPS to print documents.
 	services.printing.enable = true;
 
