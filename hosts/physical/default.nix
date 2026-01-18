@@ -6,7 +6,13 @@
 	boot.kernel.sysctl = { "vm.swappiness" = 20; };
 
 	# Enable networking
-	networking.networkmanager.enable = true;
+	networking.networkmanager = {
+		enable = true;
+		plugins = with pkgs; [
+      		networkmanager-openvpn
+    	];
+	};
+
 
 	# Enable network manager applet
 	programs.nm-applet.enable = true;
