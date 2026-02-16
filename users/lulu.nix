@@ -3,6 +3,6 @@
 	users.users.lulu = {
 		isNormalUser = true;
 		description = "LuLu Chan";
-		extraGroups = [ "dialout" "plugdev" ];
+		extraGroups = [ "dialout" "networkmanager" "plugdev" ];
 	};
 }

@@ -42,7 +42,7 @@
 		freecad
 
 		# EDA-tools
-		#kicad
+		kicad
 
 		# develop
 		meld
