@@ -110,7 +110,7 @@
 
 	programs.git = {
 		enable = true;
-		aliases = {
+		settings.alias = {
 			s = "status";
 			co = "checkout";
 			cob = "checkout -b";
