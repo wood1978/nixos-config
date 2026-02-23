@@ -13,7 +13,6 @@
     	];
 	};
 
-
 	# Enable network manager applet
 	programs.nm-applet.enable = true;
 
@@ -126,6 +125,11 @@
 		};
 	};
 
+	virtualisation.podman = {
+  		enable = true;
+  		dockerCompat = true;
+	};
+
 	# Enable flakes and depend's nix-command
 	nix.settings.experimental-features = [ "nix-command" "flakes" ];
 	# List packages installed in system profile. To search, run:
@@ -137,6 +141,7 @@
 	  	git
 		cockpit
 		netbird-ui
+		distrobox
 	];
 
 	# Some programs need SUID wrappers, can be configured further or are
