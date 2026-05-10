@@ -28,7 +28,7 @@
 		terminator
 		notepadqq
 		qalculate-qt
-		keepass
+		keepassxc
 		google-chrome
 		libreoffice-qt
 		#citrix_workspace
