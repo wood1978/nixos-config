@@ -66,6 +66,7 @@
 		kicad
 
 		# develop
+		gnumake
 		meld
 		arduino-ide
 		vscode
