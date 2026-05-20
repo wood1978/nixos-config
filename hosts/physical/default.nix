@@ -5,6 +5,9 @@
 
 	boot.kernel.sysctl = { "vm.swappiness" = 20; };
 
+	boot.initrd.systemd.enable = true;
+	#boot.kernelParams = [ "fsck.mode=force" "fsck.repair=yes" ];
+
 	# Enable networking
 	networking.networkmanager = {
 		enable = true;
