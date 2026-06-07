@@ -98,6 +98,7 @@
 		nmap # A utility for network discovery and security auditing
 		ipcalc	# it is a calculator for the IPv4/v6 addresses
 		persepolis # A download manager written in Python
+		remmina
 
 		# misc
 		file
