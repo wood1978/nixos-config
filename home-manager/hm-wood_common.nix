@@ -54,6 +54,9 @@
 		shotcut
 		kdePackages.kdenlive
 
+		# Editer
+		obsidian
+
 		# driver
 		nextcloud-client
 
@@ -99,6 +102,10 @@
 		ipcalc	# it is a calculator for the IPv4/v6 addresses
 		persepolis # A download manager written in Python
 		remmina
+		filezilla
+
+		# game
+		steam
 
 		# misc
 		file
