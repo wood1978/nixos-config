@@ -31,7 +31,7 @@
 		prusa-slicer
 
 		# Multimedia
-		vdhcoapp
+		#vdhcoapp
 		mpv
 		smplayer
 		shotcut

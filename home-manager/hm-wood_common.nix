@@ -106,7 +106,7 @@
 		wget
 
 		# game
-		steam
+		#steam
 
 		# misc
 		file
