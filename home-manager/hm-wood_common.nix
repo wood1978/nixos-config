@@ -104,6 +104,7 @@
 		remmina
 		filezilla
 		wget
+		wireshark
 
 		# game
 		#steam
