@@ -64,6 +64,7 @@
 		drawio
 		freecad
 		gimp
+		kdePackages.kolourpaint
 
 		# EDA-tools
 		kicad
