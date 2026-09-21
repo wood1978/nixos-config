@@ -1,6 +1,6 @@
 { config, pkgs, ... } : {
 	imports = [
-		#./develop/neovim
+		./develop/neovim
 		./develop/stm32cubeide
 	];
 

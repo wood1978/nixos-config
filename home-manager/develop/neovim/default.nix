@@ -1,12 +1,12 @@
 { inputs, config, pkgs, ... } : {
 	imports = [
 		inputs.nixvim.homeModules.nixvim
-		./autocommands.nix
-		./completion.nix
-		./keymappings.nix
-		./options.nix
-		./plugins
-		./todo.nix
+		#./autocommands.nix
+		#./completion.nix
+		#./keymappings.nix
+		#./options.nix
+		#./plugins
+		#./todo.nix
 	];
 
 	home.shellAliases.v = "nvim";
@@ -20,7 +20,8 @@
 		enable = true;
 		defaultEditor = true;
 
-		#nixpkgs.useGlobalPackages = false;
+		nixpkgs.useGlobalPackages = false;
+		nixpkgs.config.allowUnfree = true;
 
 		performance = {
 			combinePlugins = {
