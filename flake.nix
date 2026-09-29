@@ -13,14 +13,16 @@
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
 		nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-		nixvim = {
-			url = "github:nix-community/nixvim/nixos-26.05";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+		nixvim.url = "github:nix-community/nixvim/nixos-26.05";
 	};
 
-	outputs = { self, nixpkgs, home-manager, ... } @ inputs : let
+	outputs = { self, nixpkgs, home-manager,nixvim, ... } @ inputs : let
 		systems = {
+			t14g6 = {
+				extraImports = [
+					inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t14-intel-gen6
+				];
+			};
 			t490 = {
 				extraImports = [
 					inputs.nixos-hardware.nixosModules.lenovo-thinkpad-t490
