@@ -15,6 +15,8 @@
 
 	networking.extraHosts = ''
 		192.168.0.22	homeassistant.locale
+		100.106.66.96	nextcloud.cpttech.com
+		100.106.66.96	openproject.cpttech.com
 	'';
 
 	# Configure network proxy if necessary
@@ -73,4 +75,6 @@
 	# List services that you want to enable:
 	# Enable bluetooth service
 	services.blueman.enable = true;
+
+	services.tailscale.enable = true;
 }
