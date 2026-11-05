@@ -65,6 +65,8 @@
 		freecad
 		gimp
 		kdePackages.kolourpaint
+		imagemagick
+
 
 		# EDA-tools
 		kicad
@@ -74,10 +76,16 @@
 		meld
 		arduino-ide
 		vscode
+		git-credential-manager
 
 		# Rust
 		cargo
 		rustc
+
+		# Python
+		python313
+		python313Packages.pip
+		python313Packages.gitpython
 
 		# archives
 		zip
@@ -94,6 +102,7 @@
 		kdePackages.filelight
 
 		# networking tools
+		net-tools
 		mtr # A network diagnostic tool
 		iperf3
 		dnsutils # `dig` + `nslookup`
@@ -170,7 +179,7 @@
 		enable = true;
 		enableCompletion = true;
 		bashrcExtra = ''
-			export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin"
+			export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/Nextcloud/Script"
 		'';
 
 		shellAliases = {
@@ -178,6 +187,28 @@
 			urldecode = "python3 -c 'import sys, urllib.parse as ul; print(ul.unquote_plus(sys.stdin.read()))'";
 			urlencode = "python3 -c 'import sys, urllib.parse as ul; print(ul.quote_plus(sys.stdin.read()))'";
 		};
+	};
+
+	# each time switch chaek
+	home.activation = {
+		lxqtScreensaverFix = config.lib.dag.entryAfter [ "writeBoundary" ] ''
+		LXQT_CONF="$HOME/.config/lxqt/lxqt.conf"
+	
+		mkdir -p "$(dirname "$LXQT_CONF")"
+
+		if [ ! -f "$LXQT_CONF" ]; then
+			echo -e "[Screensaver]\nlock_command=xscreensaver-command -lock" > "$LXQT_CONF"
+		else
+			if grep -q "\[Screensaver\]" "$LXQT_CONF"; then
+				if ! grep -q "lock_command=xscreensaver-command -lock" "$LXQT_CONF"; then
+					sed -i '/lock_command=/d' "$LXQT_CONF"
+					sed -i '/\[Screensaver\]/a lock_command=xscreensaver-command -lock' "$LXQT_CONF"
+				fi
+			else
+				echo -e "\n[Screensaver]\nlock_command=xscreensaver-command -lock" >> "$LXQT_CONF"
+			fi
+		fi
+		'';
 	};
 
 	# This value determines the Home Manager release that your
