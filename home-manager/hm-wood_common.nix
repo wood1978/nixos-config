@@ -67,7 +67,6 @@
 		kdePackages.kolourpaint
 		imagemagick
 
-
 		# EDA-tools
 		kicad
 
@@ -116,9 +115,10 @@
 		filezilla
 		wget
 		wireshark
+		rustdesk
 
 		# game
-		#steam
+		steam
 
 		# misc
 		file
@@ -156,6 +156,7 @@
 		ethtool
 		pciutils # lspci
 		usbutils # lsusb
+		kdePackages.filelight
 	];
 
 	programs.git = {
@@ -179,7 +180,7 @@
 		enable = true;
 		enableCompletion = true;
 		bashrcExtra = ''
-			export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/Nextcloud/Script"
+			export PATH="$PATH:$HOME/bin:$HOME/.local/bin:$HOME/go/bin:$HOME/Nextcloud/WoodHome/Script"
 		'';
 
 		shellAliases = {
