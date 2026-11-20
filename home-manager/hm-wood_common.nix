@@ -157,6 +157,7 @@
 		pciutils # lspci
 		usbutils # lsusb
 		kdePackages.filelight
+		deskflow
 	];
 
 	programs.git = {

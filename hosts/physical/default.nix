@@ -70,6 +70,13 @@
 	services.xscreensaver.enable = true;
 	security.pam.services.xscreensaver.enable = true;
 
+	programs.sway = {
+		enable = true;
+		wrapperFeatures.gtk = true;
+		# 若你已經在 Home Manager 自行管理終端機與截圖工具，可清空預設額外套件避免重複安裝：
+		# extraPackages = [ ];
+	};
+
 	# Enable BAMF for better application launching and switching.
 	services.bamf.enable = true;
 
